@@ -2,7 +2,18 @@
 
 import { useState } from "react";
 import { Reveal } from "./Reveal";
-import { DeskIcon, CharacterIcon, RoomIcon } from "./icons";
+import {
+  DeskIcon,
+  CharacterIcon,
+  RoomIcon,
+  DeskCamIllustration,
+  CharacterCamIllustration,
+  ClockIcon,
+  CameraFilledIcon,
+  CameraOffIcon,
+  MiniBearIcon,
+  PersonDotIcon,
+} from "./icons";
 
 type CamKey = "desk" | "char" | "room";
 
@@ -72,22 +83,39 @@ export function CameraSection() {
               <div className="cam-frame">
                 {active === "desk" && (
                   <div className="desk-mock">
-                    <div className="hand" />
+                    <DeskCamIllustration />
                   </div>
                 )}
                 {active === "char" && (
                   <div className="char-mock">
-                    <div className="char-avatar">🐻</div>
+                    <CharacterCamIllustration />
+                    <span className="char-status-chip">
+                      <ClockIcon />
+                      공부 중
+                    </span>
                   </div>
                 )}
                 {active === "room" && (
                   <div className="room-mock">
-                    <div className="room-tile">
-                      <div className="room-icon" style={{ background: "var(--brand-soft-2)" }} />
+                    <div className="room-tile room-tile-selected">
+                      <span className="room-icon room-icon-cam">
+                        <CameraFilledIcon />
+                      </span>
+                      <span className="room-people">
+                        <PersonDotIcon />
+                        <PersonDotIcon />
+                        <PersonDotIcon />
+                        <PersonDotIcon />
+                      </span>
                       <span>캠 필수</span>
                     </div>
                     <div className="room-tile">
-                      <div className="room-icon" style={{ background: "#3A3D46" }} />
+                      <span className="room-icon room-icon-off">
+                        <CameraOffIcon />
+                      </span>
+                      <span className="room-avatar">
+                        <MiniBearIcon />
+                      </span>
                       <span>캠 선택</span>
                     </div>
                   </div>
