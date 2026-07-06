@@ -199,8 +199,17 @@ export function DeskCamIllustration() {
 export function CharacterCamIllustration() {
   return (
     <svg viewBox="0 0 160 160" fill="none" className="char-illust">
+      <defs>
+        <filter id="bokehBlur" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="6" />
+        </filter>
+      </defs>
+      <circle cx="26" cy="32" r="24" fill="#d9a066" opacity="0.35" filter="url(#bokehBlur)" />
+      <circle cx="136" cy="118" r="32" fill="#f2c87b" opacity="0.3" filter="url(#bokehBlur)" />
+      <circle cx="128" cy="26" r="16" fill="#6c87ff" opacity="0.18" filter="url(#bokehBlur)" />
       <circle className="focus-ring focus-ring-1" cx="80" cy="80" r="46" stroke="#6c87ff" strokeWidth="2" />
       <circle className="focus-ring focus-ring-2" cx="80" cy="80" r="46" stroke="#6c87ff" strokeWidth="2" />
+      <ellipse cx="80" cy="128" rx="30" ry="8" fill="#000000" opacity="0.18" filter="url(#bokehBlur)" />
       <ellipse cx="56" cy="48" rx="13" ry="13" fill="#f2c87b" />
       <ellipse cx="104" cy="48" rx="13" ry="13" fill="#f2c87b" />
       <circle cx="80" cy="84" r="42" fill="#f6d497" />

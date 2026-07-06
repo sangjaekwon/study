@@ -977,8 +977,10 @@ section {
   gap: 6px;
   padding: 6px 14px;
   border-radius: 999px;
-  background: var(--brand-soft);
-  color: var(--brand-deep);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #eef1ff;
   font-size: 12px;
   font-weight: 700;
 }
