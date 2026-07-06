@@ -97,28 +97,40 @@ export function CameraSection() {
                   </div>
                 )}
                 {active === "room" && (
-                  <div className="room-mock">
-                    <div className="room-tile room-tile-selected">
-                      <span className="room-icon room-icon-cam">
-                        <CameraFilledIcon />
-                      </span>
-                      <span className="room-people">
-                        <PersonDotIcon />
-                        <PersonDotIcon />
-                        <PersonDotIcon />
-                        <PersonDotIcon />
-                      </span>
-                      <span>캠 필수</span>
+                  <div className="room-grid">
+                    <div className="room-col">
+                      <div className="room-mini-tile room-mini-selected">
+                        <span className="room-mini-icon room-mini-icon-cam">
+                          <CameraFilledIcon />
+                        </span>
+                      </div>
+                      <div className="room-mini-tile">
+                        <span className="room-mini-icon room-mini-icon-cam">
+                          <PersonDotIcon />
+                        </span>
+                      </div>
+                      <span className="room-col-label">캠 필수</span>
                     </div>
-                    <div className="room-tile">
-                      <span className="room-icon room-icon-off">
-                        <CameraOffIcon />
-                      </span>
-                      <span className="room-avatar">
-                        <MiniBearIcon />
-                      </span>
-                      <span>캠 선택</span>
+                    <div className="room-col">
+                      <div className="room-mini-tile room-mini-off">
+                        <span className="room-mini-icon room-mini-icon-off">
+                          <CameraOffIcon />
+                        </span>
+                        <span className="room-mini-avatar">
+                          <MiniBearIcon />
+                        </span>
+                      </div>
+                      <div className="room-mini-tile room-mini-off">
+                        <span className="room-mini-icon room-mini-icon-off">
+                          <CameraOffIcon />
+                        </span>
+                        <span className="room-mini-avatar">
+                          <MiniBearIcon />
+                        </span>
+                      </div>
+                      <span className="room-col-label">캠 선택</span>
                     </div>
+                    <span className="room-count">4명 접속 중</span>
                   </div>
                 )}
                 <span className={`badge ${preview.badge}`}>
