@@ -147,6 +147,24 @@ export function AlertIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+export function TimelapseIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" {...props}>
+      <rect x="2.5" y="5" width="19" height="14" rx="2.4" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M10 8.5v7l6-3.5z" fill="currentColor" />
+      <circle cx="17.5" cy="7.5" r="1.1" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function PlayIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" {...props}>
+      <path d="M6 4.5v15l13-7.5z" fill="currentColor" />
+    </svg>
+  );
+}
+
 export function CameraFilledIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none">
