@@ -31,6 +31,11 @@ export default function RootLayout({
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
+        <Script
+          src="https://t.contentsquare.net/uxa/461e242e8162e.js"
+          strategy="afterInteractive"
+          defer
+        />
       </body>
     </html>
   );
