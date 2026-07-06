@@ -2,23 +2,13 @@
 
 import { useState } from "react";
 import { Reveal } from "./Reveal";
-import {
-  DeskIcon,
-  CharacterIcon,
-  RoomIcon,
-  DeskCamIllustration,
-  CharacterCamIllustration,
-  ClockIcon,
-  CameraFilledIcon,
-  CameraOffIcon,
-  MiniBearIcon,
-  PersonDotIcon,
-} from "./icons";
+import { DeskIcon, CharacterIcon, RoomIcon, ClockIcon } from "./icons";
+import { DeskCamScene, CharacterCamScene, RoomCamGrid } from "./cam-illustrations";
 
 type CamKey = "desk" | "char" | "room";
 
 const CAM_CARDS: { key: CamKey; title: string; desc: string; Icon: typeof DeskIcon }[] = [
-  { key: "desk", title: "책상/손 캠", desc: "얼굴 대신 책상, 손, 필기 화면 일부만 공유합니다.", Icon: DeskIcon },
+  { key: "desk", title: "책상/손 캠", desc: "책상, 손, 필기 화면 일부만 공유할 수 있습니다.", Icon: DeskIcon },
   {
     key: "char",
     title: "캐릭터/상태 표시",
@@ -82,57 +72,17 @@ export function CameraSection() {
               </div>
               <div className="cam-frame">
                 <span className="rec-dot" />
-                {active === "desk" && (
-                  <div className="desk-mock">
-                    <DeskCamIllustration />
-                  </div>
-                )}
+                {active === "desk" && <DeskCamScene />}
                 {active === "char" && (
-                  <div className="char-mock">
-                    <CharacterCamIllustration />
+                  <>
+                    <CharacterCamScene />
                     <span className="char-status-chip">
                       <ClockIcon />
                       공부 중
                     </span>
-                  </div>
+                  </>
                 )}
-                {active === "room" && (
-                  <div className="room-grid">
-                    <div className="room-col">
-                      <div className="room-mini-tile room-mini-selected">
-                        <span className="room-mini-icon room-mini-icon-cam">
-                          <CameraFilledIcon />
-                        </span>
-                      </div>
-                      <div className="room-mini-tile">
-                        <span className="room-mini-icon room-mini-icon-cam">
-                          <PersonDotIcon />
-                        </span>
-                      </div>
-                      <span className="room-col-label">캠 필수</span>
-                    </div>
-                    <div className="room-col">
-                      <div className="room-mini-tile room-mini-off">
-                        <span className="room-mini-icon room-mini-icon-off">
-                          <CameraOffIcon />
-                        </span>
-                        <span className="room-mini-avatar">
-                          <MiniBearIcon />
-                        </span>
-                      </div>
-                      <div className="room-mini-tile room-mini-off">
-                        <span className="room-mini-icon room-mini-icon-off">
-                          <CameraOffIcon />
-                        </span>
-                        <span className="room-mini-avatar">
-                          <MiniBearIcon />
-                        </span>
-                      </div>
-                      <span className="room-col-label">캠 선택</span>
-                    </div>
-                    <span className="room-count">4명 접속 중</span>
-                  </div>
-                )}
+                {active === "room" && <RoomCamGrid />}
                 <span className={`badge ${preview.badge}`}>
                   <i className="badge-dot" />
                   {preview.badgeText}

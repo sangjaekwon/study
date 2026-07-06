@@ -147,80 +147,6 @@ export function AlertIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function DeskCamIllustration() {
-  return (
-    <svg viewBox="0 0 220 170" fill="none" className="desk-illust">
-      <defs>
-        <linearGradient id="deskWood" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#4a3a2e" />
-          <stop offset="45%" stopColor="#3d2f26" />
-          <stop offset="100%" stopColor="#1c1510" />
-        </linearGradient>
-        <radialGradient id="deskGlow" cx="50%" cy="35%" r="65%">
-          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.12" />
-          <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-      <rect x="6" y="6" width="208" height="158" rx="18" fill="url(#deskWood)" />
-      <rect x="6" y="6" width="208" height="158" rx="18" fill="url(#deskGlow)" />
-
-      <g transform="translate(150 26)">
-        <path d="M0 12a17 17 0 0034 0V2H0v10z" fill="#e7e2d6" />
-        <path d="M34 8h6a6 6 0 010 12h-6" stroke="#e7e2d6" strokeWidth="3" fill="none" />
-      </g>
-
-      <g transform="rotate(-3 100 90)">
-        <rect x="44" y="44" width="98" height="72" rx="6" fill="#f4f1e9" />
-        <rect x="44" y="44" width="10" height="72" rx="4" fill="#d8d2c0" />
-        <circle cx="49" cy="60" r="2" fill="#a29d8c" />
-        <circle cx="49" cy="76" r="2" fill="#a29d8c" />
-        <circle cx="49" cy="92" r="2" fill="#a29d8c" />
-        <circle cx="49" cy="108" r="2" fill="#a29d8c" />
-        <path className="note-line note-line-1" d="M64 64h58" stroke="#b9b3a0" strokeWidth="3" strokeLinecap="round" />
-        <path className="note-line note-line-2" d="M64 80h48" stroke="#b9b3a0" strokeWidth="3" strokeLinecap="round" />
-        <path className="note-line note-line-3" d="M64 96h54" stroke="#b9b3a0" strokeWidth="3" strokeLinecap="round" />
-      </g>
-
-      <g transform="translate(94 100)">
-        <ellipse cx="30" cy="30" rx="34" ry="19" fill="#d9a066" />
-        <rect x="2" y="4" width="16" height="26" rx="8" fill="#d9a066" />
-        <rect x="18" y="-2" width="15" height="30" rx="7.5" fill="#d9a066" />
-        <rect x="34" y="0" width="15" height="28" rx="7.5" fill="#d9a066" />
-        <rect x="49" y="6" width="14" height="24" rx="7" fill="#d9a066" />
-        <g className="pen">
-          <rect x="30" y="-16" width="7" height="46" rx="3.5" fill="#3d5fff" transform="rotate(18 33.5 7)" />
-          <circle cx="45" cy="26" r="2.4" fill="#232a4a" />
-        </g>
-      </g>
-    </svg>
-  );
-}
-
-export function CharacterCamIllustration() {
-  return (
-    <svg viewBox="0 0 160 160" fill="none" className="char-illust">
-      <defs>
-        <filter id="bokehBlur" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="6" />
-        </filter>
-      </defs>
-      <circle cx="26" cy="32" r="24" fill="#d9a066" opacity="0.35" filter="url(#bokehBlur)" />
-      <circle cx="136" cy="118" r="32" fill="#f2c87b" opacity="0.3" filter="url(#bokehBlur)" />
-      <circle cx="128" cy="26" r="16" fill="#6c87ff" opacity="0.18" filter="url(#bokehBlur)" />
-      <circle className="focus-ring focus-ring-1" cx="80" cy="80" r="46" stroke="#6c87ff" strokeWidth="2" />
-      <circle className="focus-ring focus-ring-2" cx="80" cy="80" r="46" stroke="#6c87ff" strokeWidth="2" />
-      <ellipse cx="80" cy="128" rx="30" ry="8" fill="#000000" opacity="0.18" filter="url(#bokehBlur)" />
-      <ellipse cx="56" cy="48" rx="13" ry="13" fill="#f2c87b" />
-      <ellipse cx="104" cy="48" rx="13" ry="13" fill="#f2c87b" />
-      <circle cx="80" cy="84" r="42" fill="#f6d497" />
-      <circle cx="66" cy="80" r="4.5" fill="#3a2c10" />
-      <circle cx="94" cy="80" r="4.5" fill="#3a2c10" />
-      <ellipse cx="80" cy="94" rx="8" ry="6" fill="#e3ac5c" />
-      <path d="M74 100q6 5 12 0" stroke="#3a2c10" strokeWidth="2.4" strokeLinecap="round" fill="none" />
-    </svg>
-  );
-}
-
 export function CameraFilledIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none">
@@ -237,25 +163,6 @@ export function CameraOffIcon() {
       <rect x="2.5" y="7" width="14" height="11" rx="2.4" stroke="currentColor" strokeWidth="1.8" />
       <path d="M16.5 10.2l5-3v9.6l-5-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
       <path d="M3 3l18 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-export function MiniBearIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none">
-      <circle cx="7" cy="6" r="2.6" fill="currentColor" />
-      <circle cx="17" cy="6" r="2.6" fill="currentColor" />
-      <circle cx="12" cy="13" r="8" fill="currentColor" />
-    </svg>
-  );
-}
-
-export function PersonDotIcon() {
-  return (
-    <svg viewBox="0 0 16 16" fill="none">
-      <circle cx="8" cy="5" r="3" fill="currentColor" />
-      <path d="M2 15c0-3.5 2.7-6 6-6s6 2.5 6 6" fill="currentColor" />
     </svg>
   );
 }
