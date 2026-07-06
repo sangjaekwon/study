@@ -169,7 +169,7 @@ export function Hero() {
                 </div>
                 <div className="stat-chip">
                   <div className="k">캠 방식</div>
-                  <div className="v">책상캠</div>
+                  <div className="v">타임랩스</div>
                 </div>
               </div>
 
