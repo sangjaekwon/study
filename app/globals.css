@@ -1393,7 +1393,8 @@ section {
   flex-direction: column;
   gap: 12px;
 }
-.final-form input {
+.final-form input,
+.final-form textarea {
   width: 100%;
   padding: 16px 18px;
   border-radius: 14px;
@@ -1403,12 +1404,19 @@ section {
   color: var(--ink);
   font-family: inherit;
 }
-.final-form input:focus {
+.final-form textarea {
+  resize: vertical;
+  min-height: 88px;
+  line-height: 1.5;
+}
+.final-form input:focus,
+.final-form textarea:focus {
   outline: 2px solid var(--brand);
   outline-offset: 1px;
   border-color: var(--brand);
 }
-.final-form input::placeholder {
+.final-form input::placeholder,
+.final-form textarea::placeholder {
   color: var(--ink-faint);
 }
 .agree-row {

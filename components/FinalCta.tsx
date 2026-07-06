@@ -15,8 +15,9 @@ export function FinalCta() {
     const formData = new FormData(form);
     const exam = formData.get("exam") as string;
     const contact = formData.get("contact") as string;
+    const request = formData.get("request") as string;
 
-    const { error: insertError } = await supabase.from("signups").insert({ exam, contact });
+    const { error: insertError } = await supabase.from("signups").insert({ exam, contact, request });
     if (insertError) {
       setError(true);
       return;
@@ -46,6 +47,11 @@ export function FinalCta() {
           <form className="final-form" onSubmit={handleSubmit}>
             <input name="exam" type="text" placeholder="준비 중인 시험/자격증을 입력해 주세요." required />
             <input name="contact" type="text" placeholder="연락처 또는 이메일을 입력해 주세요." required />
+            <textarea
+              name="request"
+              placeholder="서비스에 꼭 있었으면 하는 기능이나 하고 싶은 말을 자유롭게 남겨주세요. (선택)"
+              rows={3}
+            />
             <label className="agree-row">
               <input type="checkbox" required />
               개인정보 수집 및 이용에 동의합니다.
