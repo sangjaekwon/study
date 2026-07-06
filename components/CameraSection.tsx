@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Reveal } from "./Reveal";
-import { TimelapseIcon, CharacterIcon, RoomIcon, ClockIcon, PlayIcon } from "./icons";
+import { TimelapseIcon, CharacterIcon, RoomIcon, ClockIcon } from "./icons";
 import { DeskCamScene, CharacterCamScene, RoomCamGrid } from "./cam-illustrations";
 import { trackEvent } from "@/lib/gtag";
 
@@ -11,8 +11,8 @@ type CamKey = "timelapse" | "char" | "room";
 const CAM_CARDS: { key: CamKey; title: string; desc: string; Icon: typeof TimelapseIcon }[] = [
   {
     key: "timelapse",
-    title: "공부 타임랩스 업로드",
-    desc: "실시간 캠 대신, 공부하는 모습을 타임랩스로 찍어 업로드할 수 있습니다.",
+    title: "공부 타임랩스 자동 저장",
+    desc: "실시간 캠 대신, 공부가 끝나면 촬영본이 자동으로 타임랩스 영상으로 저장됩니다.",
     Icon: TimelapseIcon,
   },
   {
@@ -30,7 +30,7 @@ const CAM_CARDS: { key: CamKey; title: string; desc: string; Icon: typeof Timela
 ];
 
 const CAM_PREVIEW: Record<CamKey, { label: string; badge: "badge-good" | "badge-warn"; badgeText: string }> = {
-  timelapse: { label: "타임랩스 업로드 미리보기", badge: "badge-good", badgeText: "집중 중" },
+  timelapse: { label: "타임랩스 자동 저장 미리보기", badge: "badge-good", badgeText: "집중 중" },
   char: { label: "캐릭터/상태 표시 미리보기", badge: "badge-good", badgeText: "집중 중" },
   room: { label: "캠 필수방 / 선택방 미리보기", badge: "badge-warn", badgeText: "휴식 중" },
 };
@@ -80,19 +80,13 @@ export function CameraSection() {
                 <span className="mono">{active === "timelapse" ? "TIMELAPSE" : "LIVE"}</span>
               </div>
               <div className="cam-frame">
-                {active === "timelapse" ? (
-                  <span className="timelapse-play-dot">
-                    <PlayIcon />
-                  </span>
-                ) : (
-                  <span className="rec-dot" />
-                )}
+                <span className="rec-dot" />
                 {active === "timelapse" && (
                   <>
                     <DeskCamScene />
                     <span className="char-status-chip">
-                      <PlayIcon />
-                      0:42 · 8배속 업로드됨
+                      <ClockIcon />
+                      촬영 중 · 종료 시 자동 타임랩스 저장
                     </span>
                   </>
                 )}

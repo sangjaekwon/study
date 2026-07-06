@@ -157,14 +157,6 @@ export function TimelapseIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function PlayIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" {...props}>
-      <path d="M6 4.5v15l13-7.5z" fill="currentColor" />
-    </svg>
-  );
-}
-
 export function CameraFilledIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none">
