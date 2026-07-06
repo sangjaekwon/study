@@ -46,7 +46,7 @@ export function FinalCta() {
           </div>
           <form className="final-form" onSubmit={handleSubmit}>
             <input name="exam" type="text" placeholder="준비 중인 시험/자격증을 입력해 주세요." required />
-            <input name="contact" type="text" placeholder="연락처 또는 이메일을 입력해 주세요." required />
+            <input name="contact" type="text" placeholder="전화번호를 입력해 주세요." required />
             <textarea
               name="request"
               placeholder="서비스에 꼭 있었으면 하는 기능이나 하고 싶은 말을 자유롭게 남겨주세요. (선택)"
