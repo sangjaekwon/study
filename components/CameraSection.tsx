@@ -81,6 +81,7 @@ export function CameraSection() {
                 <span className="mono">LIVE</span>
               </div>
               <div className="cam-frame">
+                <span className="rec-dot" />
                 {active === "desk" && (
                   <div className="desk-mock">
                     <DeskCamIllustration />
