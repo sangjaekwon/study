@@ -1010,9 +1010,9 @@ section {
 .room-grid {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  width: 88%;
+  grid-template-columns: repeat(2, 82px);
+  gap: 14px 22px;
+  justify-content: center;
 }
 .room-col {
   display: flex;
@@ -1021,8 +1021,8 @@ section {
   align-items: center;
 }
 .room-mini-tile {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 82px;
+  height: 82px;
   border-radius: 10px;
   background: #23262e;
   border: 1.5px solid #34373f;
