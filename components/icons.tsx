@@ -152,11 +152,17 @@ export function DeskCamIllustration() {
     <svg viewBox="0 0 220 170" fill="none" className="desk-illust">
       <defs>
         <linearGradient id="deskWood" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#3d2f26" />
-          <stop offset="100%" stopColor="#221a15" />
+          <stop offset="0%" stopColor="#4a3a2e" />
+          <stop offset="45%" stopColor="#3d2f26" />
+          <stop offset="100%" stopColor="#1c1510" />
         </linearGradient>
+        <radialGradient id="deskGlow" cx="50%" cy="35%" r="65%">
+          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.12" />
+          <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+        </radialGradient>
       </defs>
       <rect x="6" y="6" width="208" height="158" rx="18" fill="url(#deskWood)" />
+      <rect x="6" y="6" width="208" height="158" rx="18" fill="url(#deskGlow)" />
 
       <g transform="translate(150 26)">
         <path d="M0 12a17 17 0 0034 0V2H0v10z" fill="#e7e2d6" />
