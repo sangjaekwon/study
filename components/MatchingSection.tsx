@@ -11,8 +11,7 @@ const CHIPS = [
   { label: "현재 진도", row: "progress", note: "현재 진도 차이 ±10% 이내 그룹으로 매칭됩니다." },
   { label: "하루 목표 시간", row: "hours", note: "하루 목표 시간 4~6시간대 그룹으로 매칭됩니다." },
   { label: "선호 강도", row: "intensity", note: "선호 강도(느슨함/보통/빡셈)가 비슷한 그룹으로 매칭됩니다." },
-  { label: "캠 공개 가능 여부", row: "cam", note: "타임랩스 업로드 허용 여부가 맞는 그룹으로 매칭됩니다." },
-  { label: "질문/소통 원하는 정도", row: "", note: "소통을 적당히 원하는 그룹으로 매칭됩니다." },
+  { label: "질문/소통 원하는 정도", row: "chat", note: "소통을 적당히 원하는 그룹으로 매칭됩니다." },
 ];
 
 const PREVIEW_ROWS = [
@@ -21,7 +20,7 @@ const PREVIEW_ROWS = [
   { row: "progress", k: "평균 진도", v: "45%" },
   { row: "hours", k: "하루 목표", v: "5시간" },
   { row: "intensity", k: "강도", v: "보통" },
-  { row: "cam", k: "캠 방식", v: "타임랩스" },
+  { row: "chat", k: "소통 정도", v: "보통" },
 ];
 
 export function MatchingSection() {
