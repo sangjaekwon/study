@@ -1331,4 +1331,22 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
+  .nav-inner {
+    padding: 14px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .phone-stage {
+    height: auto;
+    max-width: 260px;
+    animation: none;
+  }
+  .phone-back {
+    display: none;
+  }
+  .phone-front {
+    position: static;
+    width: 100%;
+    transform: none;
+  }
 }
