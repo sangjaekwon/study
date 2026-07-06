@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Reveal } from "./Reveal";
 import { DeskIcon, CharacterIcon, RoomIcon, ClockIcon } from "./icons";
 import { DeskCamScene, CharacterCamScene, RoomCamGrid } from "./cam-illustrations";
+import { trackEvent } from "@/lib/gtag";
 
 type CamKey = "desk" | "char" | "room";
 
@@ -51,7 +52,10 @@ export function CameraSection() {
               <button
                 key={key}
                 className={`cam-card ${active === key ? "active" : ""}`}
-                onClick={() => setActive(key)}
+                onClick={() => {
+                  trackEvent("click_cam_card", { label: title });
+                  setActive(key);
+                }}
               >
                 <span className="cam-icon">
                   <Icon />

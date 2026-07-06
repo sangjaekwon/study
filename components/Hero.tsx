@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { CheckIcon } from "./icons";
+import { trackEvent } from "@/lib/gtag";
 
 function scrollToId(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -69,10 +70,22 @@ export function Hero() {
             타이머와 출석 관리는 자동으로 운영하세요.
           </p>
           <div className="cta-row fade-item">
-            <button className="btn-primary" onClick={() => scrollToId("cta-final")}>
+            <button
+              className="btn-primary"
+              onClick={() => {
+                trackEvent("click_hero_primary_cta", { label: "내 스터디 매칭 받아보기" });
+                scrollToId("cta-final");
+              }}
+            >
               내 스터디 매칭 받아보기
             </button>
-            <button className="btn-ghost" onClick={() => scrollToId("matching")}>
+            <button
+              className="btn-ghost"
+              onClick={() => {
+                trackEvent("click_hero_secondary_cta", { label: "어떻게 매칭되는지 보기" });
+                scrollToId("matching");
+              }}
+            >
               어떻게 매칭되는지 보기 →
             </button>
           </div>

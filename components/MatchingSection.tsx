@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Reveal } from "./Reveal";
 import { StarIcon } from "./icons";
+import { trackEvent } from "@/lib/gtag";
 
 const CHIPS = [
   { label: "같은 시험/자격증", row: "exam", note: "같은 시험/자격증 응시자만 매칭됩니다." },
@@ -50,7 +51,10 @@ export function MatchingSection() {
                 <button
                   key={chip.label}
                   className={`chip ${i === activeIndex ? "active" : ""}`}
-                  onClick={() => setActiveIndex(i)}
+                  onClick={() => {
+                    trackEvent("click_matching_chip", { label: chip.label });
+                    setActiveIndex(i);
+                  }}
                 >
                   {chip.label}
                 </button>

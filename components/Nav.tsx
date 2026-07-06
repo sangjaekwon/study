@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ArrowRightIcon } from "./icons";
+import { trackEvent } from "@/lib/gtag";
 
 function scrollToId(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -25,7 +26,13 @@ export function Nav() {
           </span>
           진도싱크
         </div>
-        <button className="nav-cta" onClick={() => scrollToId("cta-final")}>
+        <button
+          className="nav-cta"
+          onClick={() => {
+            trackEvent("click_nav_cta", { label: "사전 신청" });
+            scrollToId("cta-final");
+          }}
+        >
           사전 신청
         </button>
       </div>

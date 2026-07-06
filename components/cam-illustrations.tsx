@@ -170,23 +170,16 @@ export function DeskCamScene() {
       {/* 펜을 쥔 손 */}
       <ellipse cx="314" cy="260" rx="42" ry="9" fill="#140b05" opacity="0.32" filter="url(#dcSoft)" />
       <g className="write-hand">
-        <rect x="336" y="222" width="112" height="44" rx="22" fill="url(#dcSkin)" transform="rotate(22 350 250)" />
-        <ellipse cx="322" cy="238" rx="26" ry="20" fill="#ecbf95" transform="rotate(-16 322 238)" />
-        <rect x="300" y="250" width="30" height="11" rx="5.5" fill="#dfab7e" transform="rotate(36 330 255)" />
-        <rect x="292" y="240" width="36" height="12" rx="6" fill="#e4b285" transform="rotate(30 328 246)" />
-        <rect x="286" y="230" width="40" height="13" rx="6.5" fill="#eaba90" transform="rotate(24 326 236)" />
-        <rect x="311" y="197" width="8" height="60" rx="4" fill="#f2f0ea" transform="rotate(42.5 315 227)" />
-        <rect x="297.5" y="238" width="8" height="7" fill="#b9bcc2" transform="rotate(42.5 301.5 241.5)" />
-        <path d="M291 254 L299 244 L305 250 Z" fill="#c9ccd2" />
-        <circle cx="291.5" cy="253.5" r="1.7" fill="#2e3138" />
-        <rect x="280" y="218" width="42" height="13" rx="6.5" fill="#f2cba2" transform="rotate(30 322 224)" />
-        <rect x="294" y="224" width="32" height="14" rx="7" fill="#f2cba2" transform="rotate(12 326 231)" />
-        <rect x="283" y="238" width="7" height="6" rx="3" fill="#f8ddc2" opacity="0.8" transform="rotate(30 286.5 241)" />
-        <g stroke="#d19a6b" strokeWidth="1.4" opacity="0.5" fill="none" strokeLinecap="round">
-          <path d="M308 226 q4 -3 8 -1" />
-          <path d="M312 236 q4 -2.6 8 -0.8" />
-          <path d="M318 247 q3.6 -2.4 7.4 -0.8" />
-        </g>
+        <rect x="326" y="222" width="122" height="44" rx="22" fill="url(#dcSkin)" transform="rotate(22 350 250)" />
+        <ellipse cx="318" cy="231" rx="27" ry="21" fill="#eec19a" transform="rotate(-26 318 231)" />
+        <ellipse cx="300" cy="241" rx="10" ry="7.5" fill="#e4b285" transform="rotate(-30 300 241)" />
+        <ellipse cx="311" cy="248" rx="10" ry="7.5" fill="#dfab7e" transform="rotate(-26 311 248)" />
+        <rect x="299.5" y="172" width="7" height="72" rx="3.5" fill="#f2f0ea" transform="rotate(38 303 208)" />
+        <path d="M275.9 242.7 L283.6 238.6 L278 234.2 Z" fill="#c9ccd2" />
+        <circle cx="275.9" cy="242.7" r="1.7" fill="#2e3138" />
+        <rect x="294" y="214.5" width="32" height="13" rx="6.5" fill="#f2cba2" transform="rotate(21 310 221)" />
+        <rect x="290" y="227" width="30" height="12" rx="6" fill="#eabf93" transform="rotate(29 305 233)" />
+        <path d="M303 224 q4 -2.6 8 -0.8" stroke="#d19a6b" strokeWidth="1.4" opacity="0.45" fill="none" strokeLinecap="round" />
       </g>
 
       {/* 상단 창가 빛 */}
@@ -249,8 +242,7 @@ export function CharacterCamScene() {
         <circle cx="322" cy="118" r="7" fill="#f2c87b" opacity="0.26" />
       </g>
 
-      {/* 인물: 뒷머리 → 상체 → 어깨로 흘러내린 머리 */}
-      <ellipse cx="200" cy="115" rx="76" ry="88" fill="#241c17" />
+      {/* 인물: 상체 */}
       <path
         d="M118 300 L118 232 Q122 180 152 166 Q176 154 200 152 Q224 154 248 166 Q278 180 282 232 L282 300 Z"
         fill="url(#ccTee)"
@@ -260,26 +252,16 @@ export function CharacterCamScene() {
       <path d="M274 232 Q278 262 276 296 L258 296 Q262 260 258 230 Z" fill="#cfc4ae" opacity="0.4" filter="url(#ccSoft)" />
       <rect x="138" y="194" width="36" height="17" rx="8.5" fill="#e7dfd0" transform="rotate(14 156 202)" />
       <rect x="226" y="192" width="36" height="17" rx="8.5" fill="#e7dfd0" transform="rotate(-12 244 200)" />
-      <path d="M136 96 Q116 152 120 216 Q138 227 156 218 Q147 162 152 112 Z" fill="#261d18" />
-      <path d="M264 96 Q284 152 280 216 Q262 227 244 218 Q253 162 248 112 Z" fill="#261d18" />
-      <g stroke="#4a382c" strokeWidth="1.6" opacity="0.55" fill="none" strokeLinecap="round">
-        <path d="M134 118 Q128 164 131 204" />
-        <path d="M144 108 Q138 160 141 210" />
-        <path d="M266 118 Q272 164 269 204" />
-        <path d="M256 108 Q262 160 259 210" />
-      </g>
       <rect x="186" y="122" width="28" height="38" rx="9" fill="#e8b98c" />
       <ellipse cx="200" cy="146" rx="15" ry="6" fill="#c98f4e" opacity="0.35" />
 
-      {/* 얼굴에만 씌워진 곰 캐릭터 */}
+      {/* 얼굴에 씌워진 곰 캐릭터 */}
       <g transform="rotate(-5 200 106)">
-        <ellipse cx="200" cy="106" rx="44" ry="41" fill="url(#ccFace)" />
-        <path d="M152 88 Q150 34 200 30 Q250 34 248 88 Q240 66 200 74 Q160 66 152 88 Z" fill="#241c17" />
-        <path d="M160 78 Q172 96 168 120 Q176 98 170 80 Z" fill="#241c17" opacity="0.9" />
-        <circle cx="164" cy="63" r="15" fill="#f2c87b" />
-        <circle cx="236" cy="63" r="15" fill="#f2c87b" />
-        <circle cx="164" cy="64.5" r="7.5" fill="#e3ac5c" />
-        <circle cx="236" cy="64.5" r="7.5" fill="#e3ac5c" />
+        <circle cx="162" cy="70" r="16" fill="#f2c87b" />
+        <circle cx="238" cy="70" r="16" fill="#f2c87b" />
+        <ellipse cx="200" cy="106" rx="46" ry="42" fill="url(#ccFace)" />
+        <circle cx="159.5" cy="65.5" r="7.5" fill="#e3ac5c" />
+        <circle cx="240.5" cy="65.5" r="7.5" fill="#e3ac5c" />
         <ellipse cx="184" cy="107" rx="3.9" ry="4.7" fill="#3a2c10" />
         <ellipse cx="216" cy="107" rx="3.9" ry="4.7" fill="#3a2c10" />
         <circle cx="182.7" cy="105.2" r="1.2" fill="#fff" opacity="0.85" />
@@ -292,8 +274,6 @@ export function CharacterCamScene() {
         <ellipse cx="171" cy="119" rx="6" ry="4" fill="#f2a67f" opacity="0.45" />
         <ellipse cx="229" cy="119" rx="6" ry="4" fill="#f2a67f" opacity="0.45" />
       </g>
-      <path d="M154 86 Q147 130 156 168 Q161 130 159 92 Z" fill="#241c17" opacity="0.92" />
-      <path d="M246 86 Q253 130 244 168 Q239 130 241 92 Z" fill="#241c17" opacity="0.92" />
 
       {/* 얼굴 트래킹 브래킷 */}
       <g className="track-frame" stroke="#6c87ff" strokeWidth="2.5" strokeLinecap="round" fill="none">
@@ -397,13 +377,11 @@ function MiniCharScene() {
       <circle cx="26" cy="18" r="9" fill="#f2c87b" opacity="0.3" filter="url(#mcBlur)" />
       <circle cx="136" cy="70" r="11" fill="#f2c87b" opacity="0.22" filter="url(#mcBlur)" />
       <path d="M34 100 Q80 62 126 100 Z" fill="#f0ebe0" />
-      <ellipse cx="80" cy="70" rx="26" ry="24" fill="#241c17" />
-      <circle cx="66" cy="38" r="7" fill="#f2c87b" />
-      <circle cx="94" cy="38" r="7" fill="#f2c87b" />
-      <circle cx="66" cy="39" r="3.5" fill="#e3ac5c" />
-      <circle cx="94" cy="39" r="3.5" fill="#e3ac5c" />
-      <ellipse cx="80" cy="55" rx="19" ry="18" fill="#f6d497" />
-      <path d="M60 47 Q60 30 80 29 Q100 30 100 47 Q92 38 80 41.5 Q68 38 60 47 Z" fill="#241c17" />
+      <circle cx="64" cy="38" r="8" fill="#f2c87b" />
+      <circle cx="96" cy="38" r="8" fill="#f2c87b" />
+      <ellipse cx="80" cy="56" rx="20" ry="19" fill="#f6d497" />
+      <circle cx="62.5" cy="35.5" r="3.8" fill="#e3ac5c" />
+      <circle cx="97.5" cy="35.5" r="3.8" fill="#e3ac5c" />
       <ellipse cx="73.5" cy="56" rx="1.9" ry="2.3" fill="#3a2c10" />
       <ellipse cx="86.5" cy="56" rx="1.9" ry="2.3" fill="#3a2c10" />
       <ellipse cx="80" cy="62.5" rx="6" ry="4.4" fill="#fbe7c0" />

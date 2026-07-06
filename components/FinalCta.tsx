@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import { Reveal } from "./Reveal";
+import { trackEvent } from "@/lib/gtag";
 
 export function FinalCta() {
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    trackEvent("submit_final_cta", { label: "사전 신청하기" });
     setSubmitted(true);
     e.currentTarget.reset();
   }

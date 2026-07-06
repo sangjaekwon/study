@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-WE4Y7SV0T3";
 
 export const metadata: Metadata = {
   title: "진도싱크 — 나랑 진도 맞는 캠스터디 매칭",
@@ -14,7 +17,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }
