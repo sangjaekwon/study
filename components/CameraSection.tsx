@@ -12,7 +12,7 @@ const CAM_CARDS: { key: CamKey; title: string; desc: string; Icon: typeof Timela
   {
     key: "timelapse",
     title: "공부 타임랩스 자동 저장",
-    desc: "실시간 캠 대신, 공부가 끝나면 촬영본이 자동으로 타임랩스 영상으로 저장됩니다.",
+    desc: "공부가 끝나면 촬영본이 자동으로 타임랩스 영상으로 저장됩니다.",
     Icon: TimelapseIcon,
   },
   {
