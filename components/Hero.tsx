@@ -107,6 +107,9 @@ export function Hero() {
 
         <div className="phone-stage" ref={stageRef}>
           <div className="phone phone-back">
+            <span className="phone-island" />
+            <span className="phone-btn phone-btn-side" />
+            <span className="phone-btn phone-btn-power" />
             <div className="phone-screen">
               <div className="phone-statusbar">
                 <span>9:41</span>
@@ -130,10 +133,14 @@ export function Hero() {
                   <div className="v">7급 공무원 · 적합도 81%</div>
                 </div>
               </div>
+              <span className="phone-home-indicator" />
             </div>
           </div>
 
           <div className="phone phone-front">
+            <span className="phone-island" />
+            <span className="phone-btn phone-btn-side" />
+            <span className="phone-btn phone-btn-power" />
             <div className="phone-screen">
               <div className="phone-statusbar">
                 <span>9:41</span>
@@ -202,6 +209,7 @@ export function Hero() {
                   <span className="avatar-label">참가자 5명</span>
                 </div>
               </div>
+              <span className="phone-home-indicator" />
             </div>
           </div>
         </div>

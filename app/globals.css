@@ -327,13 +327,53 @@ button {
 .phone {
   position: absolute;
   width: 268px;
-  border-radius: 40px;
-  background: #fff;
-  border: 8px solid #fff;
+  border-radius: 54px;
+  background: linear-gradient(155deg, #3a3a3e, #17171a 40%);
+  border: 11px solid #131316;
   box-shadow:
     var(--shadow-lg),
-    0 0 0 1px rgba(20, 22, 26, 0.06);
-  overflow: hidden;
+    0 0 0 1px rgba(20, 22, 26, 0.06),
+    inset 0 0 0 1.5px rgba(255, 255, 255, 0.14);
+}
+.phone-island {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 76px;
+  height: 21px;
+  background: #0a0a0c;
+  border-radius: 12px;
+  z-index: 5;
+}
+.phone-btn {
+  position: absolute;
+  background: #131316;
+  border-radius: 2px;
+}
+.phone-btn-side {
+  left: -3px;
+  top: 92px;
+  width: 3px;
+  height: 46px;
+  box-shadow: 0 62px 0 0 #131316;
+}
+.phone-btn-power {
+  right: -3px;
+  top: 108px;
+  width: 3px;
+  height: 70px;
+}
+.phone-home-indicator {
+  position: absolute;
+  bottom: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 108px;
+  height: 4px;
+  background: rgba(20, 22, 26, 0.32);
+  border-radius: 3px;
+  z-index: 5;
 }
 .phone-back {
   top: 40px;
@@ -351,8 +391,11 @@ button {
 .phone-screen {
   background: var(--surface-2);
   min-height: 540px;
-  padding: 16px 14px 20px;
+  padding: 16px 14px 30px;
   font-size: 12px;
+  border-radius: 44px;
+  overflow: hidden;
+  position: relative;
 }
 .phone-statusbar {
   display: flex;
@@ -361,6 +404,7 @@ button {
   font-size: 11px;
   font-weight: 700;
   padding: 2px 4px 12px;
+  padding-top: 8px;
   font-family: ui-monospace, monospace;
 }
 .phone-app-logo {

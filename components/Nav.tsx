@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRightIcon } from "./icons";
+import { FitMarkIcon } from "./icons";
 import { trackEvent } from "@/lib/gtag";
 
 function scrollToId(id: string) {
@@ -22,7 +22,7 @@ export function Nav() {
       <div className="nav-inner">
         <div className="logo">
           <span className="logo-mark">
-            <ArrowRightIcon />
+            <FitMarkIcon />
           </span>
           StudyFit
         </div>

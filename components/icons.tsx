@@ -20,6 +20,19 @@ export function ArrowRightIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+export function FitMarkIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" {...props}>
+      <circle cx="8.5" cy="12" r="6.5" stroke="#fff" strokeWidth="1.5" fillOpacity="0" />
+      <circle cx="15.5" cy="12" r="6.5" stroke="#fff" strokeWidth="1.5" fillOpacity="0" />
+      <path
+        d="M12 6.52A6.5 6.5 0 0 0 12 17.48A6.5 6.5 0 0 0 12 6.52Z"
+        fill="#fff"
+      />
+    </svg>
+  );
+}
+
 export function StarIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" {...props}>
