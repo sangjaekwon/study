@@ -146,16 +146,14 @@ button {
   letter-spacing: -0.02em;
 }
 .logo-mark {
-  width: 26px;
-  height: 26px;
-  border-radius: 8px;
-  background: var(--brand);
+  width: 24px;
+  height: 24px;
   display: grid;
   place-items: center;
 }
 .logo-mark svg {
-  width: 15px;
-  height: 15px;
+  width: 22px;
+  height: 22px;
 }
 .nav-cta {
   background: var(--brand);

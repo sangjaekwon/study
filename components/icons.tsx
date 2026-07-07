@@ -20,13 +20,13 @@ export function ArrowRightIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+export const FIT_MARK_PATH =
+  "M7,4 L9.4,4 A2.6,2.6 0 0 0 14.6,4 L17,4 A3,3 0 0 1 20,7 L20,9.4 A2.6,2.6 0 0 1 20,14.6 L20,17 A3,3 0 0 1 17,20 L7,20 A3,3 0 0 1 4,17 L4,7 A3,3 0 0 1 7,4 Z";
+
 export function FitMarkIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" {...props}>
-      <path
-        d="M12 6.52A6.5 6.5 0 0 0 12 17.48A6.5 6.5 0 0 0 12 6.52Z"
-        fill="#fff"
-      />
+      <path d={FIT_MARK_PATH} fill="var(--brand)" />
     </svg>
   );
 }
