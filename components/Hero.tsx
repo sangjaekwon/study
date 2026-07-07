@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { CheckIcon } from "./icons";
+import { CheckIcon, FitMarkIcon } from "./icons";
 import { trackEvent } from "@/lib/gtag";
 
 function scrollToId(id: string) {
@@ -116,7 +116,7 @@ export function Hero() {
                 <span>●●● 100%</span>
               </div>
               <div className="phone-app-logo">
-                <span className="dot" />
+                <FitMarkIcon className="dot" />
                 StudyFit · 스터디룸
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -147,7 +147,7 @@ export function Hero() {
                 <span>●●● 100%</span>
               </div>
               <div className="phone-app-logo">
-                <span className="dot" />
+                <FitMarkIcon className="dot" />
                 StudyFit
               </div>
 
