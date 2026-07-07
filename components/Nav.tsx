@@ -24,7 +24,7 @@ export function Nav() {
           <span className="logo-mark">
             <ArrowRightIcon />
           </span>
-          진도싱크
+          StudyFit
         </div>
         <button
           className="nav-cta"

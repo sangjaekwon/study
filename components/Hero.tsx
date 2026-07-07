@@ -114,7 +114,7 @@ export function Hero() {
               </div>
               <div className="phone-app-logo">
                 <span className="dot" />
-                진도싱크 · 스터디룸
+                StudyFit · 스터디룸
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 <div className="app-card" style={{ marginBottom: 0 }}>
@@ -141,7 +141,7 @@ export function Hero() {
               </div>
               <div className="phone-app-logo">
                 <span className="dot" />
-                진도싱크
+                StudyFit
               </div>
 
               <div className="app-card">
